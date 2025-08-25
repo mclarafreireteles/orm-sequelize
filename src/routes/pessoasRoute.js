@@ -3,6 +3,6 @@ const PessoaController = require('../controllers/PessoaController.js');
 
 const router = Router();
 
-router.get('/pessoa', PessoaController.pegaTodas);
+router.get('/pessoas', PessoaController.pegaTodas);
 
 module.exports = router;
