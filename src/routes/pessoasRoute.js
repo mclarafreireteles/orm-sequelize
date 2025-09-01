@@ -6,4 +6,5 @@ const router = Router();
 
 router.get('/pessoas', (req, res) => pessoaController.pegaTodos(req, res));
 
+
 module.exports = router;
