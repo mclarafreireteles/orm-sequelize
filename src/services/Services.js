@@ -13,6 +13,12 @@ class Services {
     return dataSource[this.model].findAll();
   }
 
+  async pegaRegistrosPorEscopo(escopo){
+    const Model = dataSource[this.model];
+    console.log('Atributos conhecidos pelo Sequelize para o modelo:', Object.keys(Model.getAttributes()));
+    return dataSource[this.model].scope(escopo).findAll();
+  }
+
   async pegaUmRegistroPorId(id) {
     return dataSource[this.model].findByPk(id);
   }
